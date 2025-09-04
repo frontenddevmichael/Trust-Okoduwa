@@ -1636,7 +1636,8 @@ button:hover i {
     }
 
     .skill {
-        height: clamp(14rem, 50vw, 18rem);
+        height: fit-content;
+        width: 95%;
         padding: clamp(8px, 3vw, 12px);
     }
 
