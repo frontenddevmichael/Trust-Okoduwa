@@ -1,7 +1,17 @@
 /* =========================
    PREMIUM APPLE-STYLE ANIMATIONS
 ========================= */
+// Add this script before closing body tag
+window.addEventListener('scroll', () => {
+    const nav = document.querySelector('.nav');
+    const heroHeight = document.querySelector('.hero').offsetHeight;
 
+    if (window.scrollY > heroHeight - 100) {
+        nav.classList.add('scrolled');
+    } else {
+        nav.classList.remove('scrolled');
+    }
+});
 // Page Loader Class
 class PageLoader {
     constructor() {
@@ -383,3 +393,72 @@ window.addEventListener('load', () => {
 
 // Scroll events
 window.addEventListener('scroll', throttle(animateOnScroll, 100));
+
+
+
+const themeToggle = document.getElementById('themeToggle');
+
+// Check for saved theme preference
+const currentTheme = localStorage.getItem('theme') || 'light';
+document.documentElement.setAttribute('data-theme', currentTheme);
+
+// Function to update button text
+function updateButtonText(theme) {
+    if (theme === 'dark') {
+        themeToggle.textContent = 'Light Mode';
+    } else {
+        themeToggle.textContent = 'Dark Mode';
+    }
+}
+
+// Initialize button text
+updateButtonText(currentTheme);
+
+// Theme toggle functionality
+themeToggle.addEventListener('click', () => {
+    // Add switching class for loading animation
+    themeToggle.classList.add('switching');
+    themeToggle.textContent = 'Switching...';
+
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+    // Slight delay for smooth transition
+    setTimeout(() => {
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateButtonText(newTheme);
+
+        // Remove switching class
+        themeToggle.classList.remove('switching');
+    }, 300);
+});
+
+// Projects section animation observer
+const projectsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Animate title
+            const title = entry.target.querySelector('h1');
+            if (title) title.classList.add('revealed');
+
+            // Animate description
+            const description = entry.target.querySelector('p');
+            if (description) description.classList.add('animated');
+
+            // Animate project cards with stagger
+            const cards = entry.target.querySelectorAll('.project-card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('project-animate');
+                }, index * 200);
+            });
+        }
+    });
+}, { threshold: 0.3 });
+
+// Observe projects section
+const projectsSection = document.querySelector('.Projects');
+if (projectsSection) {
+    projectsObserver.observe(projectsSection);
+}

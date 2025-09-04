@@ -14,21 +14,21 @@
 </head>
 
 <body>
-    <!-- Page Loader -->
-
-    </div>
+    <button class="theme-toggle" id="themeToggle">Dark Mode</button>
     <div class="nav">
+
         <div class="navLogo">
             <h1>Template Studios</h1>
         </div>
         <div class="navLinks">
-            <a href="">Home</a>
-            <a href="">About</a>
-            <a href="">Skills</a>
-            <a href="">Contact</a>
+            <a href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#Skills">Skills</a>
+            <a href="#Project">Projects</a>
+            <a href="#Contact">Contact</a>
         </div>
     </div>
-    <div class="hero">
+    <div class="hero" id="Home">
         <!-- From Uiverse.io by Smit-Prajapati -->
         <div class="loader">
             <div class="box">
@@ -59,8 +59,10 @@
             <h2>Multidisciplinary Designer </h2>
             <p>Founder of Template Studio · UI/UX, Brand, and Creative Design</p>
             <div class="herobtns">
-                <button class="primary">View My work <i class="fa-solid fa-arrow-right"></i></button>
-                <button class="secondary"> Contact Me <i class="fa-solid fa-address-card"></i></button>
+                <button class="primary" onclick="window.location.href= '#Project'">View My work <i
+                        class="fa-solid fa-arrow-right"></i></button>
+                <button class="secondary" onclick="window.location.href = '#Contact'"> Contact Me <i
+                        class="fa-solid fa-address-card"></i></button>
             </div>
         </div>
         <div class="scrollanimation">
@@ -68,7 +70,7 @@
             <p>Scroll Down. to explore</p>
         </div>
     </div>
-    <div class="About">
+    <div class="About" id="About">
         <div class="abouttxt">
             <h1>About Me</h1>
             <p>I'm a multidisciplinary designer with a passion for creating meaningful digital experiences and
@@ -101,7 +103,7 @@
             <a href="https://www.instagram.com/trust_thecreator"><i class="fa-solid fa-hashtag"></i>trust_thecreator</a>
         </div>
     </div>
-    <div class="Skills">
+    <div class="Skills" id="Skills">
         <h1>Skills and Services</h1>
         <p>Comprehensive design solutions across multiple disciplines, from user experience to brand identity and
             creative
@@ -133,7 +135,92 @@
             </div>
         </div>
     </div>
-    <div class="Contact">
+    <div class="Projects" id="Project">
+        <h2 class="ProjectTitle">Featured Projects</h2>
+        <p>Selected works showcasing creative design, brand identity, and user experience solutions.</p>
+
+        <div class="project-grid">
+            <!-- Project Card 1 -->
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="/Brand Design.jpeg" alt="Project 1">
+                </div>
+                <div class="project-info">
+                    <h2>Brand Identity Design</h2>
+                    <p>Zentro is a fintech brand designed to simplify money management for students and young
+                        professionals.
+                        With a focus on clarity, ease, and empowerment, Zentro provides intuitive tools that make
+                        budgeting,
+                        saving, and financial learning stress-free and engaging. The identity reflects balance, focus,
+                        and calm
+                        in the often chaotic world of money — helping young people stay centered and in charge of their
+                        financial journey.</p>
+                    <div class="project-links">
+                        <a href="https://www.behance.net/gallery/233296149/Zentro-Visual-Identity-SAAS"
+                            target="_blank"><i class="fa-brands fa-behance"></i> View</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="/Mobile.jpeg" alt="Project 2">
+                </div>
+                <div class="project-info">
+                    <h2>Mobile App UI</h2>
+                    <p>
+                        Nestoria is a modern <strong>e-commerce mobile app</strong> designed to help users easily
+                        discover
+                        and purchase furniture for different parts of their home. With a clean interface and categorized
+                        navigation, Nestoria focuses on making furniture shopping simple and engaging.
+                    </p>
+                    <p>
+                        The project aims to <strong>simplify the furniture shopping experience</strong>, especially for
+                        users
+                        who receive money at intervals and want to budget wisely for home items. The design highlights
+                        clarity,
+                        ease of navigation, and a visually appealing product showcase.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://www.behance.net/gallery/228595245/Nestoria-E-commerce-Mobile-app"
+                            target="_blank"><i class="fa-brands fa-behance"></i>
+                            Prototype</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="/Creative.jpeg" alt="Project 3">
+                </div>
+                <div class="project-info">
+                    <h2>Creative Campaign</h2>
+                    <p>
+                        Creative Visuals is a curated collection of moodboards and design explorations that showcase
+                        my approach to <strong>brand storytelling, color theory, and visual direction</strong>.
+                        Built on Pinterest, this series highlights inspirations across <strong>branding, typography,
+                            UI/UX aesthetics, and product presentation</strong>, serving as a digital gallery for
+                        experimenting with fresh styles and creative trends.
+                    </p>
+                    <p>
+                        More than just inspiration, this board acts as a <strong>visual research library</strong> —
+                        guiding my design decisions, influencing client branding strategies, and capturing ideas
+                        that shape my personal creative identity. It reflects how I translate abstract concepts into
+                        practical design direction, ensuring every project starts with strong, purposeful visuals.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://www.pinterest.com/Trust_thecreator/?invite_code=7c8d73de8e5444ee8139eb5a907c6b2f&sender=1112811526584274259"
+                            target="_blank"><i class="fa-brands fa-pinterest"></i>
+                            Campaign</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="Contact" id="Contact">
         <h1>Let's Work together</h1>
         <p>Ready to bring your vision to life? Let's discuss your project and create something amazing together.</p>
         <div class="contactContent">
@@ -162,9 +249,17 @@
                             <i class="fa-solid fa-envelope"></i>
                             <span>hello@trustokoduwa.com</span>
                         </div>
-                        <div class="contact-item">
-                            <i class="fa-solid fa-phone"></i>
+                        <div class="contact-item" onclick="window.location.href = 'https://wa.me/2349061712509'">
+                            <i class="fa-brands fa-whatsapp"></i>
                             <span>+234 807 827 6795</span>
+                        </div>
+                        <div class="">
+                            <i class="fa-solid fa-headset"></i>
+                            <span>Available for consultation</span>
+                        </div>
+                        <div class="">
+                            <i class="fa-solid fa-globe"></i>
+                            <span>Remote & On-site projects</span>
                         </div>
                     </div>
                 </div>
@@ -173,19 +268,19 @@
                     <h3>Follow Me</h3>
                     <p>Connect on social media</p>
                     <div class="social-links">
-                        <a href="#" class="social-link">
+                        <a href="https://www.linkedin.com/in/trustokoduwa" class="social-link">
                             <i class="fa-brands fa-linkedin-in"></i>
                             <p>Trust Okoduwa</p>
                         </a>
-                        <a href="#" class="social-link">
+                        <a href="https://x.com/trust_thecreator" class="social-link">
                             <i class="fa-brands fa-twitter"></i>
                             <p>@trust_thecreaator</p>
                         </a>
-                        <a href="#" class="social-link">
+                        <a href="https://www.pinterest.com/trust_thecreaator/" class="social-link">
                             <i class="fa-brands fa-pinterest"></i>
                             <p>@trust_thecreaator</p>
                         </a>
-                        <a href="#" class="social-link">
+                        <a href="https://www.instagram.com/trust_thecreator" class="social-link">
                             <i class="fa-brands fa-instagram"></i>
                             <p>@trust_thecreaator</p>
                         </a>
@@ -206,9 +301,9 @@
             <div class="footer-links">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Skills">Skills</a></li>
+                    <li><a href="#Contact">Contact</a></li>
                 </ul>
             </div>
 
